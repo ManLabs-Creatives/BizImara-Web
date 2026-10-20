@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "out" # plugin will wire outputs; keep publish minimal or leave Netlify to the plugin
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

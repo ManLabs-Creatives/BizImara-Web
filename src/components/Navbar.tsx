@@ -2,31 +2,32 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* Logo icon (orange geometric shape) */}
-          <div className="w-8 h-8 relative flex items-center justify-center text-primary">
-            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#090b0d]/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-[0_0_30px_rgba(255,106,61,0.2)]">
+            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
               <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
             </svg>
           </div>
-          <span className="text-xl md:text-2xl font-extrabold tracking-tight text-text-main">
+          <span className="text-xl font-extrabold tracking-[-0.06em] text-white md:text-2xl">
             BizImara <span className="text-primary">POS</span>
           </span>
         </div>
-        
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 font-medium text-sm text-text-main">
-          <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
-          <Link href="#how-it-works" className="hover:text-primary transition-colors">How It Works</Link>
-          <Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link>
-          <Link href="#about" className="hover:text-primary transition-colors">About & Privacy</Link>
-          <Link href="#terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+
+        <nav className="hidden items-center gap-8 text-sm font-semibold text-white/75 md:flex">
+          <Link href="#features" className="transition-colors hover:text-white">Features</Link>
+          <Link href="#how-it-works" className="transition-colors hover:text-white">How it works</Link>
+          <Link href="#pricing" className="transition-colors hover:text-white">Pricing</Link>
+          <Link href="#about" className="transition-colors hover:text-white">About</Link>
         </nav>
-        
+
         <div className="hidden md:block">
-          <Link href="#download" className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-light transition-colors shadow-sm text-sm">
+          <Link
+            href="#download"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-primary-light"
+          >
             Download App
           </Link>
         </div>

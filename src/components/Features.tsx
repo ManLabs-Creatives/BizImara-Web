@@ -20,30 +20,29 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 md:py-28 bg-background" id="features">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">CORE FEATURES</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-text-main mb-6">Everything Your Business Needs</h2>
-          <p className="text-lg text-text-muted font-medium">Built to simplify daily operations while helping your business grow.</p>
+    <section className="bg-[#0d1014] py-20 md:py-28" id="features">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="mb-4 block text-sm font-bold uppercase tracking-[0.2em] text-primary">Core features</span>
+          <h2 className="mb-6 text-3xl font-extrabold tracking-[-0.06em] text-white md:text-4xl lg:text-5xl">
+            Built to keep your whole operation moving.
+          </h2>
+          <p className="text-lg text-text-muted">Simplify daily operations, reduce friction, and help your business grow with confidence.</p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div 
+              <div
                 key={index}
-                className="bg-white rounded-3xl p-8 md:p-10 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl shadow-md border border-gray-100 flex flex-col items-start"
+                className="group flex flex-col items-start rounded-[28px] border border-white/10 bg-[#111417] p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_20px_50px_rgba(255,106,61,0.12)] md:p-10"
               >
-                <div className="w-16 h-16 bg-surface-light rounded-full flex items-center justify-center mb-8 border-[6px] border-white ring-1 ring-primary/10 shadow-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-primary/5 rounded-full" />
-                  <Icon className="w-7 h-7 text-primary relative z-10" strokeWidth={2} />
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary shadow-[0_0_25px_rgba(255,106,61,0.15)]">
+                  <Icon className="h-7 w-7" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold text-text-main mb-4">{feature.title}</h3>
-                <p className="text-text-muted leading-relaxed font-medium">
-                  {feature.description}
-                </p>
+                <h3 className="mb-4 text-2xl font-bold tracking-[-0.05em] text-white">{feature.title}</h3>
+                <p className="text-base leading-relaxed text-text-muted">{feature.description}</p>
               </div>
             );
           })}
